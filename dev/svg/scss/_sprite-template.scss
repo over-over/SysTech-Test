@@ -1,0 +1,14 @@
+.i {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  fill: inherit;
+  stroke: inherit;
+  vertical-align: middle;
+}
+<% _.forEach(svg, function(svgItem) { %>
+    .<%=svgItem.name%> {
+      font-size:<%= svgItem.height %>px;
+      width:(<%= svgItem.width %>/<%= svgItem.height %>)+em;
+    }
+<% }); %>

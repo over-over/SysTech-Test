@@ -1,0 +1,16 @@
+/* mixins */
+@mixin respond-to($media) {
+	@media only screen and (min-width: map-get($breakpoints, $media)) {
+		@content;
+	}
+}
+@mixin respond-up($media) {
+	@media only screen and (max-width: map-get($breakpoints, $media) - 1px) {
+		@content;
+	}
+}
+@mixin respond-between ($from, $to) {
+	@media only screen and (min-width: map-get($breakpoints, $from)) and (max-width: map-get($breakpoints, $to) - 1px) {
+		@content;
+	}
+}

@@ -1,0 +1,158 @@
+%flex-container {
+    display: flex;
+    flex-wrap: wrap;
+	margin: 0 $column_gutter/(-2);
+}
+.row{
+    @extend %flex-container;
+    flex-direction: row;
+}
+.column{
+    @extend %flex-container;
+    flex-direction: column;
+}
+.self-center{
+	align-self: center;
+}
+.self-start{
+	align-self: flex-start;
+}
+.self-end{
+	align-self: flex-end;
+}
+
+%col- {
+	padding-left:$column_gutter/2;
+	padding-right:$column_gutter/2;
+}
+
+@for $i from 1 through $column_number {
+	.col-x-#{$i} {
+		@extend %col-;		
+	}
+	.col-xs-#{$i} {
+		@extend %col-;		
+	}
+	.col-s-#{$i} {
+		@extend %col-;
+	}
+	.col-m-#{$i} {
+		@extend %col-;
+	}
+	.col-l-#{$i} {
+		@extend %col-;
+	}
+	.col-xl-#{$i} {
+		@extend %col-;
+	}
+}
+
+// X columns
+@for $i from 1 through $column_number {
+	.col-x-#{$i} {
+		//@extend %col-x-;
+		width:100% / $column_number * $i;
+	}
+	.col-x-#{$i}-offset {
+		margin-left: 100% / $column_number * $i;
+	}
+}
+
+// XS columns
+@include respond-to(extrasmall) {
+	@for $i from 1 through $column_number {
+		.col-xs-#{$i} {
+			//@extend %col-xs-respond;
+			width:100% / $column_number * $i;
+		}
+		.col-xs-#{$i}-offset {
+			margin-left:100% / $column_number * $i;
+		}
+	}
+}
+
+// S columns
+@include respond-to(small) {
+	@for $i from 1 through $column_number {
+		.col-s-#{$i} {
+			//@extend %col-xs-respond;
+			width:100% / $column_number * $i;
+		}
+		.col-s-#{$i}-offset {
+			margin-left:100% / $column_number * $i;
+		}
+	}
+}
+
+// M columns
+@include respond-to(medium) {
+	@for $i from 1 through $column_number {
+		.col-m-#{$i} {
+			//@extend %col-xs-respond;
+			width:100% / $column_number * $i;
+		}
+		.col-m-#{$i}-offset {
+			margin-left:100% / $column_number * $i;
+		}
+	}
+}
+
+// L columns
+@include respond-to(large) {
+	@for $i from 1 through $column_number {
+		.col-l-#{$i} {
+			//@extend %col-xs-respond;
+			width:100% / $column_number * $i;
+		}
+		.col-l-#{$i}-offset {
+			margin-left:100% / $column_number * $i;
+		}
+	}
+}
+
+// XL columns
+@include respond-to(extralarge) {
+	@for $i from 1 through $column_number {
+		.col-xl-#{$i} {
+			//@extend %col-xs-respond;
+			width:100% / $column_number * $i;
+		}
+		.col-xl-#{$i}-offset {
+			margin-left:100% / $column_number * $i;
+		}
+	}
+}
+
+// visibility of elements
+@include respond-up(extrasmall) {
+	.hidden-x {
+		display:none;
+	}	
+}
+
+@include respond-between(extrasmall, small) {
+	.hidden-xs {
+		display:none;
+	}	
+}
+
+@include respond-between(small, medium) {
+	.hidden-s {
+		display:none;
+	}
+}
+@include respond-between(medium, large) {
+	.hidden-m {
+		display:none;
+	}
+}
+@include respond-to(large) {
+	.hidden-l {
+		display:none;
+	}
+}
+@include respond-to(extrasmall) {
+	.visible-x {
+		display:none;
+	}
+}

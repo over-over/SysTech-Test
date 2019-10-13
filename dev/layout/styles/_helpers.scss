@@ -1,0 +1,33 @@
+.clear {
+	clear: both;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+@for $i from 1 through $verticalStepsCount{
+	.mt-#{$i} {
+		margin-top: $verticalStep * $i;
+	}
+	.mb-#{$i} {
+		margin-bottom: $verticalStep * $i;
+	}
+}
+.nowrap {
+	white-space:nowrap;
+}
+.rel {
+	position: relative;
+}
+.container{
+	width: 1200px;
+	margin: auto;
+}

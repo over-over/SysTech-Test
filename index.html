@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/screen.min.css">
+</head>
+<body>
+    <div class="body">
+        <section class="container">
+            <div class="list">
+                <div class="list__wrapper">
+                    <div class="list__header">
+                        <button class="list_header-collapse js-collapse">
+                            <svg class="i i-angle-down-solid"><use xlink:href="#i-angle-down-solid"></use></svg>
+                        </button>
+                        <span class="list__header-date">14 Июня</span>
+                        <span class="list__header-summary">Документов: 4 (7 776,67 Р)</span>
+                    </div>
+                    <ul class="list__docs">
+                        <li class="list__docs-item">
+                            <span class="list__docs-info">Приход №234265435</span>
+                            <span class="list__docs-price">375 Р</span>
+                            <button class="list__products-btn">
+                                <span class="list__products-btn-icon">
+                                    <svg class="i i-caret-down-solid"><use xlink:href="#i-caret-down-solid"></use></svg>
+                                </span>
+                                <span>Товаров: 6</span>
+                            </button>
+                            <ul class="list__products">
+                                <li class="list__products-item">
+                                    <img src="http://www.calorizator.ru/sites/default/files/imagecache/product_512/product/tvorog-prostokvashino-1.jpg" alt="Творог нежирный" class="list__products-img">
+                                    <span class="list__products-name">Творог нежирный</span>
+                                    <span class="list__products-quantity">5 штук х 75 Р</span>
+                                    <span class="list__products-price">375 Р</span>
+                                </li>
+                                <li class="list__products-item">
+                                    <img src="http://www.calorizator.ru/sites/default/files/imagecache/product_512/product/tvorog-prostokvashino-1.jpg" alt="Творог нежирный" class="list__products-img">
+                                    <span class="list__products-name">Творог нежирный</span>
+                                    <span class="list__products-quantity">5 штук х 75 Р</span>
+                                    <span class="list__products-price">375 Р</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+<script>
+	!function(e,t){"use strict";if(!t.createElementNS||!t.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var n,o,a="localStorage"in e&&null!==e.localStorage,l=function(){t.body.insertAdjacentHTML("afterbegin",o)},r=function(){t.body?l():t.addEventListener("DOMContentLoaded",l)};if(a&&1==localStorage.getItem("inlineSVGrevV2")&&localStorage.getItem("inlineSVGdataV2")&&(localStorage.removeItem("inlineSVGrevV2"),localStorage.removeItem("inlineSVGdataV2")),a&&1==localStorage.getItem("{{ currentRev }}")&&(o=localStorage.getItem("{{ currentData }}")))return r(),!0;try{(n=new XMLHttpRequest).open("GET","svg/symbol_sprite.svg",!0),n.onload=function(){n.status>=200&&n.status<400&&(o=n.responseText,r(),a&&(localStorage.setItem("{{ currentData }}",o),localStorage.setItem("{{ currentRev }}",1)))},n.send()}catch(e){console.log(e)}}(window,document);
+</script>
+<script src="js/myscript.js"></script>
+</html>

@@ -1,0 +1,15 @@
+.list{
+    font-size: 1rem;
+    max-width: em(430,16);
+    margin: auto;
+}
+.list__wrapper{
+    background-color: $white;
+    padding: em(12,16);
+}
+.list__header-summary{
+    float: right;
+}
+.list__products-img{
+    max-width: em(56,16);
+}

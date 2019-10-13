@@ -1,0 +1,53 @@
+/* Typography */
+$baseFontSize: 16px;
+$font: 'Roboto', sans-serif;
+$fontSecondary: 'Roboto', sans-serif;
+$fontWeight: 400;
+
+/* Colors */
+$white: #fff;
+$black: #000;
+
+$primaryColor: #c5a800;
+
+@function rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+@function em($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+/* grid metrics */
+$verticalStep: rem(15);
+$column_number: 12;
+$column_gutter: 20px;
+$column_size: 100/$column_number * 1%;
+
+/* Helpers */
+$verticalStepsCount: 4;
+
+/* Breakpoints */
+$breakpoints: (
+	extrasmall: 450px,
+	small: 768px,
+	medium: 992px,
+	large: 1366px,
+	extralarge: 1800px
+);
