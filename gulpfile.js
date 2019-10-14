@@ -9,12 +9,52 @@ var cleanCss = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var babel = require('gulp-babel');
+var nunjucks = require('gulp-nunjucks');
+var data = require('gulp-data');
+var fs = require('fs');
+global.Intl = require('intl');
 
 var svgSprite = require('gulp-svg-sprite'),
     svgSprites = require('gulp-svg-sprites'),
     svgmin = require('gulp-svgmin'),
     cheerio = require('gulp-cheerio'),
     replace = require('gulp-replace');
+
+gulp.task('nunjucks', function(done){
+	gulp.src('dev/templates/index.html')
+        .pipe(data(function (){
+            const data = JSON.parse(fs.readFileSync('dev/data/index.json'));
+            const newData = {};
+            const dateTimeFormat = new Intl.DateTimeFormat('ru-Ru', { month: 'long', day: 'numeric' });
+            data.forEach((item) => {
+                const dateKey = item.date.substr(0,10);
+                if(newData[dateKey] == undefined){
+                    newData[dateKey] = {
+                        dateName: dateTimeFormat.format(new Date(dateKey)),
+                        docs: {},
+                        docsPrice: 0,
+                    };
+                }
+                if(newData[dateKey].docs[item.id] == undefined){
+                    newData[dateKey].docs[item.id] = {docName: item.docName, docPrice: 0, products: []};
+                }
+                const newItem = {
+                    productName: item.name,
+                    image: item.image,
+                    price: item.price,
+                    quantity: item.quantity,
+                    isRemoved: item.removed,
+                }
+                newData[dateKey].docs[item.id].products.push(newItem);
+                newData[dateKey].docs[item.id].docPrice += item.price * item.quantity;
+                newData[dateKey].docsPrice += item.price * item.quantity;
+            });
+            return {'data': newData};
+        }))
+		.pipe(nunjucks.compile())
+		.pipe(gulp.dest('./'))
+    done();
+});
 
 gulp.task('svgMin', function () {
     return gulp.src('dev/svg/*.svg')
@@ -151,8 +191,9 @@ gulp.task('js', function(done) {
     done();
 });
 
-gulp.task('default', gulp.series('css', 'js', function(done){
+gulp.task('default', gulp.series('css', 'js', 'nunjucks', function(done){
     gulp.watch(['dev/layout/styles/*.scss', 'dev/lib/**/styles/*.scss'], gulp.series('css'));
     gulp.watch(['dev/layout/js/*.js','dev/lib/**/js/*.js'], gulp.series('js'));
+    gulp.watch(['dev/templates/*.html'], gulp.series('nunjucks'));
     done();
 }));

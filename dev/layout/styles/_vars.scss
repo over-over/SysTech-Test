@@ -8,7 +8,9 @@ $fontWeight: 400;
 $white: #fff;
 $black: #000;
 
-$primaryColor: #c5a800;
+$primaryColor: #8a8a8a;
+$selectColor: #ef1313;
+$borderColor: #e8e8e8;
 
 @function rem($pixels, $context: $baseFontSize) {
   @if (unitless($pixels)) {

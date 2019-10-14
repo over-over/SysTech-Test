@@ -32,6 +32,13 @@ ul,
 ol {
   list-style: none;
 }
+button{
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+}
 
 @import "dev/layout/styles/_vars";
 
@@ -45,8 +52,9 @@ body {
   background:#eeeeee;
   overflow-x:hidden;
 }
-body {
+.body {
   position: relative;
+  margin: rem(32,16) 0;
 }
 
 @import "dev/layout/styles/_helpers";
@@ -54,25 +62,173 @@ body {
 @import "dev/layout/styles/_grid";
 @import "dev/layout/styles/_svg_sprite";
 
-.body{
-  overflow-x: hidden;
-}
 img, svg {
   user-select:none;
 }
 
+@include respond-up(large){
+  .container{
+    width: auto;
+    padding: 0 rem(8,16);
+  }
+  .body {
+  position: relative;
+  margin: rem(8,16) 0;
+  }
+}
 .list{
     font-size: 1rem;
     max-width: em(430,16);
     margin: auto;
+    margin-bottom: em(10,16);
+    color: $primaryColor;
 }
 .list__wrapper{
     background-color: $white;
-    padding: em(12,16);
+    box-shadow: 0px 4px 8px 2px rgba(0, 0, 0, 0.15);
+}
+.list__header{
+    padding: em(12,16) em(12,16) em(22,16) em(12,16);
+    display: block;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    color: inherit;
+    transition: color 0.3s;
+    outline: none;
+    &:hover,
+    &:focus{
+        color: $selectColor;
+        .i-angle-down-solid{
+            fill: $selectColor;
+        }
+    }
+    &.--collapsed{
+        .i-angle-down-solid{
+            transform: rotate(180deg);
+        }
+    }
+}
+.list_header-collapse{
+    margin-right: em(7,16);
+    .i-angle-down-solid{
+        font-size: em(14,16);
+        transform-origin: center;
+        transition: transform 0.3s, fill 0.3s;
+        vertical-align: baseline;
+    }
 }
 .list__header-summary{
     float: right;
 }
+.list__docs{
+    position: relative;
+    padding: em(16,16) em(12,16);
+    border-bottom: 1px solid $borderColor;
+    &:first-child{
+        padding-top: 0;
+    }
+}
+.list__docs-item{
+    font-size: em(14,16);
+}
+.list__docs-info{
+    padding-right: em(32,16);
+    padding-left: em(20,16);
+}
+.list__docs-price{
+    float: right;
+}
+.list__products-btn{
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: em(12,16) 0 em(12,16) em(20,16);
+    cursor: pointer;
+    color: inherit;
+    transition: color 0.3s;
+    outline: none;
+    &:hover,
+    &:focus{
+        color: $selectColor;
+        .i-caret-down-solid{
+            fill: $selectColor;
+        }
+    }
+    &.--collapsed{
+        .i-caret-down-solid{
+            transform: rotate(180deg);
+        }
+    }
+}
+.list__products-btn-icon{
+    margin-right: 5px; 
+    .i-caret-down-solid{
+        font-size: em(14,16);
+        transform-origin: center;
+        transition: transform 0.3s, fill 0.3s;
+    }
+}
+.list__products-item{
+    color: $black;
+    font-size: em(18,16);
+    margin-bottom: em(8,18);
+    padding-left: em(32,18);
+    padding-right: em(48,18);
+    &:last-child{
+        padding-bottom: em(18,18);
+        margin-bottom: 0;
+    }
+}
+.list__products-info{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - #{em(62,18)});
+    padding-left: em(20,18);
+    font-weight: 500;
+}
+.list__products-name{
+    font-size: em(14,16);
+    padding-bottom: em(7,14);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.list__products-img-wrapper{
+    display: inline-block;
+    height: em(56,18);
+    width: em(56,18);
+}
 .list__products-img{
-    max-width: em(56,16);
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    font-size: em(10,18);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.list__products-price{
+    float: right;
+}
+@include respond-up(extrasmall){
+    .list{
+        font-size: rem(14,16);
+    }
+    .list__products-item{
+        margin-bottom: em(16,16);
+    }
+        .list__products-info{
+        padding-left: em(36,18);
+    }
+    .list__products-quantity{
+        font-size: em(14,16);
+    }
+    .list__products-price{
+        display: block;
+        float: none;
+        font-size: em(18,14);
+        margin-top: em(9,18);
+    }
 }

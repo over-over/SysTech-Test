@@ -1,57 +1,1216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Products List</title>
     <link rel="stylesheet" href="css/screen.min.css">
 </head>
 <body>
+
     <div class="body">
         <section class="container">
+            
             <div class="list">
                 <div class="list__wrapper">
-                    <div class="list__header">
-                        <button class="list_header-collapse js-collapse">
+                    <button class="list__header js-collapse" data-target="#docs-2017-10-16">
+                        <span class="list_header-collapse">
                             <svg class="i i-angle-down-solid"><use xlink:href="#i-angle-down-solid"></use></svg>
-                        </button>
-                        <span class="list__header-date">14 Июня</span>
-                        <span class="list__header-summary">Документов: 4 (7 776,67 Р)</span>
-                    </div>
+                        </span>
+                        <span class="list__header-date">16 Октября</span>
+                        <span class="list__header-summary">Документов: 3 (100029,7 ₽)</span>
+                    </button>
+                    <div id="docs-2017-10-16">
+                    
                     <ul class="list__docs">
                         <li class="list__docs-item">
-                            <span class="list__docs-info">Приход №234265435</span>
-                            <span class="list__docs-price">375 Р</span>
-                            <button class="list__products-btn">
+                            <div>
+                                <p class="list__docs-info">
+                                <span class="list__docs-id">Расход №564564867361367</span>
+                                <span class="list__docs-price">55535,8 ₽</span>
+                                </p>
+                                <button class="list__products-btn js-collapse" data-target="#products-2017-10-16-564564867361367">
                                 <span class="list__products-btn-icon">
                                     <svg class="i i-caret-down-solid"><use xlink:href="#i-caret-down-solid"></use></svg>
                                 </span>
-                                <span>Товаров: 6</span>
-                            </button>
-                            <ul class="list__products">
+                                <span>Товаров: 8</span>
+                                </button>
+                            </div>
+                            <ul class="list__products" id="products-2017-10-16-564564867361367">
+                            
                                 <li class="list__products-item">
-                                    <img src="http://www.calorizator.ru/sites/default/files/imagecache/product_512/product/tvorog-prostokvashino-1.jpg" alt="Творог нежирный" class="list__products-img">
-                                    <span class="list__products-name">Творог нежирный</span>
-                                    <span class="list__products-quantity">5 штук х 75 Р</span>
-                                    <span class="list__products-price">375 Р</span>
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://ecosned.ru/image/cache/catalog/categories/iz_fermerskogo_moloka/tvorog/7/ge-catalog-categories-iz_fermerskogo_moloka-tvorog-tvorozhnaya_massa_s_kuragoy-800x800.jpg" alt="Творог 9% с курагой" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Творог 9% с курагой</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">45 штук х 121 ₽</span>
+                                        <span class="list__products-price">5445 ₽</span>
+                                    </div>
                                 </li>
+                            
                                 <li class="list__products-item">
-                                    <img src="http://www.calorizator.ru/sites/default/files/imagecache/product_512/product/tvorog-prostokvashino-1.jpg" alt="Творог нежирный" class="list__products-img">
-                                    <span class="list__products-name">Творог нежирный</span>
-                                    <span class="list__products-quantity">5 штук х 75 Р</span>
-                                    <span class="list__products-price">375 Р</span>
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.utkonos.ru/images/photo/3265/3265004H.jpg" alt="Молочный Яблоко 100" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Яблоко 100</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">44 штуки х 25,1 ₽</span>
+                                        <span class="list__products-price">1104,4 ₽</span>
+                                    </div>
                                 </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/299388/Ydfgl76IXe0nEM2gO6Ww.JPG" alt="Молочный Традиция 100" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Традиция 100</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">62 штуки х 115 ₽</span>
+                                        <span class="list__products-price">7130 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="./img/no-image.png" alt="No image" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Виноград 0,3л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">87 штук х 65 ₽</span>
+                                        <span class="list__products-price">5655 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://mariupolcena.com/files/products/9ff44136e6ccb0afb404ad26f727e67d.jpeg" alt="Русская картошка чедар 50" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Русская картошка чедар 50</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">86 штук х 46,3 ₽</span>
+                                        <span class="list__products-price">3981,8 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://images.ua.prom.st/50389447_w640_h640_ncheskaya_s_grushej_200_g..jpg" alt="Молочный Груша 200" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Груша 200</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">80 штук х 180 ₽</span>
+                                        <span class="list__products-price">14400 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.utkonos.ru/images/photo/3054/3054289H.jpg" alt="Аленка карамель 100г Акционный товар Большая скидка" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Аленка карамель 100г Акционный товар Большая скидка</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">94 штуки х 73,9 ₽</span>
+                                        <span class="list__products-price">6946,6 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.utkonos.ru/images/photo/3176/3176192H.jpg" alt="Сыр 125г" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Сыр 125г</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">83 штуки х 131 ₽</span>
+                                        <span class="list__products-price">10873 ₽</span>
+                                    </div>
+                                </li>
+                            
                             </ul>
                         </li>
                     </ul>
+                    
+                    <ul class="list__docs">
+                        <li class="list__docs-item">
+                            <div>
+                                <p class="list__docs-info">
+                                <span class="list__docs-id">Расчет №564564867361368</span>
+                                <span class="list__docs-price">27420 ₽</span>
+                                </p>
+                                <button class="list__products-btn js-collapse" data-target="#products-2017-10-16-564564867361368">
+                                <span class="list__products-btn-icon">
+                                    <svg class="i i-caret-down-solid"><use xlink:href="#i-caret-down-solid"></use></svg>
+                                </span>
+                                <span>Товаров: 5</span>
+                                </button>
+                            </div>
+                            <ul class="list__products" id="products-2017-10-16-564564867361368">
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://карапузик.com.images.1c-bitrix-cdn.ru/upload/iblock/b28/b28f089d41db757b74cfebfe21609228.jpg" alt="Яблоко-Виноград 0,5л" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Яблоко-Виноград 0,5л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">20 штук х 44 ₽</span>
+                                        <span class="list__products-price">880 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://images.ua.prom.st/50389447_w640_h640_ncheskaya_s_grushej_200_g..jpg" alt="Молочный Груша 200" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Груша 200</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">65 штук х 180 ₽</span>
+                                        <span class="list__products-price">11700 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://ecosned.ru/image/cache/catalog/categories/iz_fermerskogo_moloka/tvorog/7/ge-catalog-categories-iz_fermerskogo_moloka-tvorog-tvorozhnaya_massa_s_kuragoy-800x800.jpg" alt="Творог 9% с курагой" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Творог 9% с курагой</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">41 штука х 121 ₽</span>
+                                        <span class="list__products-price">4961 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.komus.ru/medias/sys_master/root/hd3/h93/9286922043422.jpg" alt="Молочный Изюм 100" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Изюм 100</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">72 штуки х 102 ₽</span>
+                                        <span class="list__products-price">7344 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="./img/no-image.png" alt="No image" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Виноград 0,3л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">39 штук х 65 ₽</span>
+                                        <span class="list__products-price">2535 ₽</span>
+                                    </div>
+                                </li>
+                            
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <ul class="list__docs">
+                        <li class="list__docs-item">
+                            <div>
+                                <p class="list__docs-info">
+                                <span class="list__docs-id">Приход №564564867361369</span>
+                                <span class="list__docs-price">17073,9 ₽</span>
+                                </p>
+                                <button class="list__products-btn js-collapse" data-target="#products-2017-10-16-564564867361369">
+                                <span class="list__products-btn-icon">
+                                    <svg class="i i-caret-down-solid"><use xlink:href="#i-caret-down-solid"></use></svg>
+                                </span>
+                                <span>Товаров: 4</span>
+                                </button>
+                            </div>
+                            <ul class="list__products" id="products-2017-10-16-564564867361369">
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/299388/Ydfgl76IXe0nEM2gO6Ww.JPG" alt="Молочный Традиция 100" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Традиция 100</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">60 штук х 115 ₽</span>
+                                        <span class="list__products-price">6900 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.utkonos.ru/images/photo/3054/3054289H.jpg" alt="Аленка карамель 100г Акционный товар Большая скидка" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Аленка карамель 100г Акционный товар Большая скидка</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">99 штук х 73,9 ₽</span>
+                                        <span class="list__products-price">7316,1 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://mariupolcena.com/files/products/9ff44136e6ccb0afb404ad26f727e67d.jpeg" alt="Русская картошка чедар 50" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Русская картошка чедар 50</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">51 штука х 46,3 ₽</span>
+                                        <span class="list__products-price">2361,3 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.utkonos.ru/images/photo/3117/3117496H.jpg" alt="Русская картошка икра 50" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Русская картошка икра 50</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">15 штук х 33,1 ₽</span>
+                                        <span class="list__products-price">496,5 ₽</span>
+                                    </div>
+                                </li>
+                            
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    </div>
                 </div>
             </div>
+            
+            <div class="list">
+                <div class="list__wrapper">
+                    <button class="list__header js-collapse" data-target="#docs-2017-11-01">
+                        <span class="list_header-collapse">
+                            <svg class="i i-angle-down-solid"><use xlink:href="#i-angle-down-solid"></use></svg>
+                        </span>
+                        <span class="list__header-date">1 Ноября</span>
+                        <span class="list__header-summary">Документов: 1 (30855,9 ₽)</span>
+                    </button>
+                    <div id="docs-2017-11-01">
+                    
+                    <ul class="list__docs">
+                        <li class="list__docs-item">
+                            <div>
+                                <p class="list__docs-info">
+                                <span class="list__docs-id">Приход №564564867361360</span>
+                                <span class="list__docs-price">30855,9 ₽</span>
+                                </p>
+                                <button class="list__products-btn js-collapse" data-target="#products-2017-11-01-564564867361360">
+                                <span class="list__products-btn-icon">
+                                    <svg class="i i-caret-down-solid"><use xlink:href="#i-caret-down-solid"></use></svg>
+                                </span>
+                                <span>Товаров: 3</span>
+                                </button>
+                            </div>
+                            <ul class="list__products" id="products-2017-11-01-564564867361360">
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://images.ua.prom.st/50389447_w640_h640_ncheskaya_s_grushej_200_g..jpg" alt="Молочный Груша 200" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Груша 200</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">96 штук х 180 ₽</span>
+                                        <span class="list__products-price">17280 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="./img/no-image.png" alt="No image" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Парус апельсин 1л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">89 штук х 150 ₽</span>
+                                        <span class="list__products-price">13350 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.utkonos.ru/images/photo/3265/3265004H.jpg" alt="Молочный Яблоко 100" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Яблоко 100</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">9 штук х 25,1 ₽</span>
+                                        <span class="list__products-price">225,9 ₽</span>
+                                    </div>
+                                </li>
+                            
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    </div>
+                </div>
+            </div>
+            
+            <div class="list">
+                <div class="list__wrapper">
+                    <button class="list__header js-collapse" data-target="#docs-2017-11-03">
+                        <span class="list_header-collapse">
+                            <svg class="i i-angle-down-solid"><use xlink:href="#i-angle-down-solid"></use></svg>
+                        </span>
+                        <span class="list__header-date">3 Ноября</span>
+                        <span class="list__header-summary">Документов: 2 (70118,51 ₽)</span>
+                    </button>
+                    <div id="docs-2017-11-03">
+                    
+                    <ul class="list__docs">
+                        <li class="list__docs-item">
+                            <div>
+                                <p class="list__docs-info">
+                                <span class="list__docs-id">Приход №564564867361361</span>
+                                <span class="list__docs-price">21826,1 ₽</span>
+                                </p>
+                                <button class="list__products-btn js-collapse" data-target="#products-2017-11-03-564564867361361">
+                                <span class="list__products-btn-icon">
+                                    <svg class="i i-caret-down-solid"><use xlink:href="#i-caret-down-solid"></use></svg>
+                                </span>
+                                <span>Товаров: 7</span>
+                                </button>
+                            </div>
+                            <ul class="list__products" id="products-2017-11-03-564564867361361">
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://mariupolcena.com/files/products/9ff44136e6ccb0afb404ad26f727e67d.jpeg" alt="Русская картошка чедар 50" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Русская картошка чедар 50</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">62 штуки х 46,3 ₽</span>
+                                        <span class="list__products-price">2870,6 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://produkty-online.ru/wa-data/public/shop/products/31/83/18331/images/1359/1359.970.jpg" alt="Молочный Сказка 100" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Сказка 100</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">67 штук х 39 ₽</span>
+                                        <span class="list__products-price">2613 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.utkonos.ru/images/photo/3139/3139296H.jpg" alt="Тоник 0,5л" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Тоник 0,5л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">51 штука х 63 ₽</span>
+                                        <span class="list__products-price">3213 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.komus.ru/medias/sys_master/root/hd3/h93/9286922043422.jpg" alt="Молочный Изюм 100" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Изюм 100</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">4 штуки х 102 ₽</span>
+                                        <span class="list__products-price">408 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://ecosned.ru/image/cache/catalog/categories/iz_fermerskogo_moloka/tvorog/7/ge-catalog-categories-iz_fermerskogo_moloka-tvorog-tvorozhnaya_massa_s_kuragoy-800x800.jpg" alt="Творог 9% с курагой" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Творог 9% с курагой</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">60 штук х 121 ₽</span>
+                                        <span class="list__products-price">7260 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="./img/no-image.png" alt="No image" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Виноград 0,3л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">61 штука х 65 ₽</span>
+                                        <span class="list__products-price">3965 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://xn--4-8sbu.xn--p1ai/thumb/4KQdJOhw0Uu5AnP0PPIrMQ/200r200/761268/3152.png" alt="Беседа. 50гр" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Беседа. 50гр</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">41 штука х 36,5 ₽</span>
+                                        <span class="list__products-price">1496,5 ₽</span>
+                                    </div>
+                                </li>
+                            
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <ul class="list__docs">
+                        <li class="list__docs-item">
+                            <div>
+                                <p class="list__docs-info">
+                                <span class="list__docs-id">Приход №564564867361362</span>
+                                <span class="list__docs-price">48292,41 ₽</span>
+                                </p>
+                                <button class="list__products-btn js-collapse" data-target="#products-2017-11-03-564564867361362">
+                                <span class="list__products-btn-icon">
+                                    <svg class="i i-caret-down-solid"><use xlink:href="#i-caret-down-solid"></use></svg>
+                                </span>
+                                <span>Товаров: 9</span>
+                                </button>
+                            </div>
+                            <ul class="list__products" id="products-2017-11-03-564564867361362">
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.komus.ru/medias/sys_master/root/hd3/h93/9286922043422.jpg" alt="Молочный Изюм 100" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Изюм 100</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">3 штуки х 102 ₽</span>
+                                        <span class="list__products-price">306 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.utkonos.ru/images/photo/3176/3176192H.jpg" alt="Сыр 125г" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Сыр 125г</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">96 штук х 131 ₽</span>
+                                        <span class="list__products-price">12576 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.utkonos.ru/images/photo/3139/3139296H.jpg" alt="Тоник 0,5л" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Тоник 0,5л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">31 штука х 63 ₽</span>
+                                        <span class="list__products-price">1953 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="./img/no-image.png" alt="No image" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Парус лимон 1л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">52 штуки х 150 ₽</span>
+                                        <span class="list__products-price">7800 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://www.svoda.ru/site/userfiles/images/%D0%9A%D0%90%D0%9F%D0%9B%D0%AF%20%D0%A0%D0%9E%D0%A1%D0%AB%201.5%D0%9B%20%D0%93%D0%90%D0%97%D0%98%D0%A0%D0%9E%D0%92%D0%90%D0%9D%D0%9D%D0%90%D0%AF.jpg" alt="Капля росы негаз 1.5л" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Капля росы негаз 1.5л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">16 штук х 16,9 ₽</span>
+                                        <span class="list__products-price">270,4 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://www.calorizator.ru/sites/default/files/imagecache/product_512/product/tvorog-prostokvashino-1.jpg" alt="Нежирный творог" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Нежирный творог</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">81 штука х 52,41 ₽</span>
+                                        <span class="list__products-price">4245,21 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://ecosned.ru/image/cache/catalog/categories/iz_fermerskogo_moloka/tvorog/7/ge-catalog-categories-iz_fermerskogo_moloka-tvorog-tvorozhnaya_massa_s_kuragoy-800x800.jpg" alt="Творог 9% с курагой" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Творог 9% с курагой</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">23 штуки х 121 ₽</span>
+                                        <span class="list__products-price">2783 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://tashkentcena.com/files/products/893eebe7b69146290886dc504a3328ef.jpeg" alt="Горький коньяк 100" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Горький коньяк 100</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">52 штуки х 336 ₽</span>
+                                        <span class="list__products-price">17472 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.utkonos.ru/images/photo/3054/3054289H.jpg" alt="Аленка карамель 100г Акционный товар Большая скидка" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Аленка карамель 100г Акционный товар Большая скидка</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">12 штук х 73,9 ₽</span>
+                                        <span class="list__products-price">886,8 ₽</span>
+                                    </div>
+                                </li>
+                            
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    </div>
+                </div>
+            </div>
+            
+            <div class="list">
+                <div class="list__wrapper">
+                    <button class="list__header js-collapse" data-target="#docs-2017-11-29">
+                        <span class="list_header-collapse">
+                            <svg class="i i-angle-down-solid"><use xlink:href="#i-angle-down-solid"></use></svg>
+                        </span>
+                        <span class="list__header-date">29 Ноября</span>
+                        <span class="list__header-summary">Документов: 3 (96718,6 ₽)</span>
+                    </button>
+                    <div id="docs-2017-11-29">
+                    
+                    <ul class="list__docs">
+                        <li class="list__docs-item">
+                            <div>
+                                <p class="list__docs-info">
+                                <span class="list__docs-id">Приход №564564867361365</span>
+                                <span class="list__docs-price">37204,1 ₽</span>
+                                </p>
+                                <button class="list__products-btn js-collapse" data-target="#products-2017-11-29-564564867361365">
+                                <span class="list__products-btn-icon">
+                                    <svg class="i i-caret-down-solid"><use xlink:href="#i-caret-down-solid"></use></svg>
+                                </span>
+                                <span>Товаров: 9</span>
+                                </button>
+                            </div>
+                            <ul class="list__products" id="products-2017-11-29-564564867361365">
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://mariupolcena.com/files/products/9ff44136e6ccb0afb404ad26f727e67d.jpeg" alt="Русская картошка чедар 50" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Русская картошка чедар 50</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">3 штуки х 46,3 ₽</span>
+                                        <span class="list__products-price">138,9 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="./img/no-image.png" alt="No image" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Виноград 0,3л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">88 штук х 65 ₽</span>
+                                        <span class="list__products-price">5720 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://www.calorizator.ru/sites/default/files/imagecache/product_512/product/tvorog-prostokvashino-1.jpg" alt="Нежирный творог" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Нежирный творог</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">20 штук х 52,41 ₽</span>
+                                        <span class="list__products-price">1048,2 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.utkonos.ru/images/photo/3139/3139296H.jpg" alt="Тоник 0,5л" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Тоник 0,5л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">64 штуки х 63 ₽</span>
+                                        <span class="list__products-price">4032 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://produkty-online.ru/wa-data/public/shop/products/31/83/18331/images/1359/1359.970.jpg" alt="Молочный Сказка 100" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Сказка 100</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">54 штуки х 39 ₽</span>
+                                        <span class="list__products-price">2106 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="./img/no-image.png" alt="No image" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Парус апельсин 1л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">88 штук х 150 ₽</span>
+                                        <span class="list__products-price">13200 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://teremok.sm.ua/wa-data/public/shop/products/82/25/82582/images/35179/35179.750@2x.jpg" alt="Сметана и лук 25г" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Сметана и лук 25г</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">33 штуки х 30 ₽</span>
+                                        <span class="list__products-price">990 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://xn--4-8sbu.xn--p1ai/thumb/4KQdJOhw0Uu5AnP0PPIrMQ/200r200/761268/3152.png" alt="Беседа. 50гр" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Беседа. 50гр</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">6 штук х 36,5 ₽</span>
+                                        <span class="list__products-price">219 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="./img/no-image.png" alt="No image" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Парус лимон 1л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">65 штук х 150 ₽</span>
+                                        <span class="list__products-price">9750 ₽</span>
+                                    </div>
+                                </li>
+                            
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <ul class="list__docs">
+                        <li class="list__docs-item">
+                            <div>
+                                <p class="list__docs-info">
+                                <span class="list__docs-id">Расход №564564867361364</span>
+                                <span class="list__docs-price">7360 ₽</span>
+                                </p>
+                                <button class="list__products-btn js-collapse" data-target="#products-2017-11-29-564564867361364">
+                                <span class="list__products-btn-icon">
+                                    <svg class="i i-caret-down-solid"><use xlink:href="#i-caret-down-solid"></use></svg>
+                                </span>
+                                <span>Товаров: 1</span>
+                                </button>
+                            </div>
+                            <ul class="list__products" id="products-2017-11-29-564564867361364">
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://irecommend.ru/sites/default/files/imagecache/copyright1/user-images/299388/Ydfgl76IXe0nEM2gO6Ww.JPG" alt="Молочный Традиция 100" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Традиция 100</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">64 штуки х 115 ₽</span>
+                                        <span class="list__products-price">7360 ₽</span>
+                                    </div>
+                                </li>
+                            
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    <ul class="list__docs">
+                        <li class="list__docs-item">
+                            <div>
+                                <p class="list__docs-info">
+                                <span class="list__docs-id">Приход №564564867361363</span>
+                                <span class="list__docs-price">52154,5 ₽</span>
+                                </p>
+                                <button class="list__products-btn js-collapse" data-target="#products-2017-11-29-564564867361363">
+                                <span class="list__products-btn-icon">
+                                    <svg class="i i-caret-down-solid"><use xlink:href="#i-caret-down-solid"></use></svg>
+                                </span>
+                                <span>Товаров: 7</span>
+                                </button>
+                            </div>
+                            <ul class="list__products" id="products-2017-11-29-564564867361363">
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://mariupolcena.com/files/products/9ff44136e6ccb0afb404ad26f727e67d.jpeg" alt="Русская картошка чедар 50" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Русская картошка чедар 50</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">6 штук х 46,3 ₽</span>
+                                        <span class="list__products-price">277,8 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://teremok.sm.ua/wa-data/public/shop/products/82/25/82582/images/35179/35179.750@2x.jpg" alt="Сметана и лук 25г" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Сметана и лук 25г</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">18 штук х 30 ₽</span>
+                                        <span class="list__products-price">540 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="http://xn--4-8sbu.xn--p1ai/thumb/4KQdJOhw0Uu5AnP0PPIrMQ/200r200/761268/3152.png" alt="Беседа. 50гр" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Беседа. 50гр</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">99 штук х 36,5 ₽</span>
+                                        <span class="list__products-price">3613,5 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://tashkentcena.com/files/products/893eebe7b69146290886dc504a3328ef.jpeg" alt="Горький коньяк 100" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Горький коньяк 100</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">94 штуки х 336 ₽</span>
+                                        <span class="list__products-price">31584 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.utkonos.ru/images/photo/3176/3176192H.jpg" alt="Сыр 125г" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Сыр 125г</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">64 штуки х 131 ₽</span>
+                                        <span class="list__products-price">8384 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="https://www.utkonos.ru/images/photo/3265/3265004H.jpg" alt="Молочный Яблоко 100" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Молочный Яблоко 100</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">52 штуки х 25,1 ₽</span>
+                                        <span class="list__products-price">1305,2 ₽</span>
+                                    </div>
+                                </li>
+                            
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        
+                                        <img src="./img/no-image.png" alt="No image" class="list__products-img">
+                                        
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">Парус апельсин 1л</p>
+                                        
+                                        
+                                        
+                                            
+                                        
+                                        <span class="list__products-quantity">43 штуки х 150 ₽</span>
+                                        <span class="list__products-price">6450 ₽</span>
+                                    </div>
+                                </li>
+                            
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                    </div>
+                </div>
+            </div>
+            
         </section>
     </div>
 </body>
 <script>
-	!function(e,t){"use strict";if(!t.createElementNS||!t.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var n,o,a="localStorage"in e&&null!==e.localStorage,l=function(){t.body.insertAdjacentHTML("afterbegin",o)},r=function(){t.body?l():t.addEventListener("DOMContentLoaded",l)};if(a&&1==localStorage.getItem("inlineSVGrevV2")&&localStorage.getItem("inlineSVGdataV2")&&(localStorage.removeItem("inlineSVGrevV2"),localStorage.removeItem("inlineSVGdataV2")),a&&1==localStorage.getItem("{{ currentRev }}")&&(o=localStorage.getItem("{{ currentData }}")))return r(),!0;try{(n=new XMLHttpRequest).open("GET","svg/symbol_sprite.svg",!0),n.onload=function(){n.status>=200&&n.status<400&&(o=n.responseText,r(),a&&(localStorage.setItem("{{ currentData }}",o),localStorage.setItem("{{ currentRev }}",1)))},n.send()}catch(e){console.log(e)}}(window,document);
+	!function(e,t){"use strict";if(!t.createElementNS||!t.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var n,o,a="localStorage"in e&&null!==e.localStorage,l=function(){t.body.insertAdjacentHTML("afterbegin",o)},r=function(){t.body?l():t.addEventListener("DOMContentLoaded",l)};if(a&&1==localStorage.getItem("inlineSVGrevV2")&&localStorage.getItem("inlineSVGdataV2")&&(localStorage.removeItem("inlineSVGrevV2"),localStorage.removeItem("inlineSVGdataV2")),a&&1==localStorage.getItem("")&&(o=localStorage.getItem("")))return r(),!0;try{(n=new XMLHttpRequest).open("GET","svg/symbol_sprite.svg",!0),n.onload=function(){n.status>=200&&n.status<400&&(o=n.responseText,r(),a&&(localStorage.setItem("",o),localStorage.setItem("",1)))},n.send()}catch(e){console.log(e)}}(window,document);
 </script>
 <script src="js/myscript.js"></script>
 </html>

@@ -32,6 +32,13 @@ ul,
 ol {
   list-style: none;
 }
+button{
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+}
 
 @import "dev/layout/styles/_vars";
 
@@ -45,8 +52,9 @@ body {
   background:#eeeeee;
   overflow-x:hidden;
 }
-body {
+.body {
   position: relative;
+  margin: rem(32,16) 0;
 }
 
 @import "dev/layout/styles/_helpers";
@@ -54,9 +62,17 @@ body {
 @import "dev/layout/styles/_grid";
 @import "dev/layout/styles/_svg_sprite";
 
-.body{
-  overflow-x: hidden;
-}
 img, svg {
   user-select:none;
+}
+
+@include respond-up(large){
+  .container{
+    width: auto;
+    padding: 0 rem(8,16);
+  }
+  .body {
+  position: relative;
+  margin: rem(8,16) 0;
+  }
 }

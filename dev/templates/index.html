@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Products List</title>
+    <link rel="stylesheet" href="css/screen.min.css">
+</head>
+<body>
+
+    <div class="body">
+        <section class="container">
+            {% for item, name in data %}
+            <div class="list">
+                <div class="list__wrapper">
+                    <button class="list__header js-collapse" data-target="#docs-{{item}}">
+                        <span class="list_header-collapse">
+                            <svg class="i i-angle-down-solid"><use xlink:href="#i-angle-down-solid"></use></svg>
+                        </span>
+                        <span class="list__header-date">{{ data[item].dateName | title  }}</span>
+                        <span class="list__header-summary">Документов: {{ data[item].docs | length }} ({{ data[item].docsPrice | round(2) | replace(".", ",") }} ₽)</span>
+                    </button>
+                    <div id="docs-{{ item }}">
+                    {% for key, value in data[item].docs %}
+                    <ul class="list__docs">
+                        <li class="list__docs-item">
+                            <div>
+                                <p class="list__docs-info">
+                                <span class="list__docs-id">{{ data[item].docs[key].docName }} №{{ key }}</span>
+                                <span class="list__docs-price">{{ data[item].docs[key].docPrice | round(2) | replace(".", ",") }} ₽</span>
+                                </p>
+                                <button class="list__products-btn js-collapse" data-target="#products-{{item}}-{{key}}">
+                                <span class="list__products-btn-icon">
+                                    <svg class="i i-caret-down-solid"><use xlink:href="#i-caret-down-solid"></use></svg>
+                                </span>
+                                <span>Товаров: {{ data[item].docs[key].products | length }}</span>
+                                </button>
+                            </div>
+                            <ul class="list__products" id="products-{{item}}-{{key}}">
+                            {% for product in data[item].docs[key].products %}
+                                <li class="list__products-item">
+                                    <div class="list__products-img-wrapper">
+                                        {% if product.image|length %}
+                                        <img src="{{ product.image }}" alt="{{ product.productName }}" class="list__products-img">
+                                        {% else %}
+                                        <img src="./img/no-image.png" alt="No image" class="list__products-img">
+                                        {% endif %}
+                                    </div>
+                                    <div class="list__products-info">
+                                        <p class="list__products-name">{{ product.productName }}</p>
+                                        {% set things = ['штука', 'штуки', 'штук'] %}
+                                        {% set cases = [2, 0, 1, 1, 1, 2] %}
+                                        {% if product.quantity % 100 > 4 and product.quantity % 100 < 20 %}
+                                            {% set thing = 2 %}
+                                        {% elif product.quantity % 10 < 5 %}
+                                            {% set thing = cases[product.quantity % 10] %}
+                                        {% else %}
+                                            {% set thing = cases[5] %}
+                                        {% endif %}
+                                        <span class="list__products-quantity">{{ product.quantity }} {{ things[thing] }} х {{ product.price | round(2) | replace(".", ",") }} ₽</span>
+                                        <span class="list__products-price">{{ (product.quantity * product.price) | round(2) | replace(".", ",") }} ₽</span>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </section>
+    </div>
+</body>
+<script>
+	!function(e,t){"use strict";if(!t.createElementNS||!t.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var n,o,a="localStorage"in e&&null!==e.localStorage,l=function(){t.body.insertAdjacentHTML("afterbegin",o)},r=function(){t.body?l():t.addEventListener("DOMContentLoaded",l)};if(a&&1==localStorage.getItem("inlineSVGrevV2")&&localStorage.getItem("inlineSVGdataV2")&&(localStorage.removeItem("inlineSVGrevV2"),localStorage.removeItem("inlineSVGdataV2")),a&&1==localStorage.getItem("{{ currentRev }}")&&(o=localStorage.getItem("{{ currentData }}")))return r(),!0;try{(n=new XMLHttpRequest).open("GET","svg/symbol_sprite.svg",!0),n.onload=function(){n.status>=200&&n.status<400&&(o=n.responseText,r(),a&&(localStorage.setItem("{{ currentData }}",o),localStorage.setItem("{{ currentRev }}",1)))},n.send()}catch(e){console.log(e)}}(window,document);
+</script>
+<script src="js/myscript.js"></script>
+</html>
