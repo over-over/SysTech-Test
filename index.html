@@ -1210,6 +1210,7 @@
     </div>
 </body>
 <script>
+    localStorage.clear();
 	!function(e,t){"use strict";if(!t.createElementNS||!t.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect)return!0;var n,o,a="localStorage"in e&&null!==e.localStorage,l=function(){t.body.insertAdjacentHTML("afterbegin",o)},r=function(){t.body?l():t.addEventListener("DOMContentLoaded",l)};if(a&&1==localStorage.getItem("inlineSVGrevV2")&&localStorage.getItem("inlineSVGdataV2")&&(localStorage.removeItem("inlineSVGrevV2"),localStorage.removeItem("inlineSVGdataV2")),a&&1==localStorage.getItem("")&&(o=localStorage.getItem("")))return r(),!0;try{(n=new XMLHttpRequest).open("GET","svg/symbol_sprite.svg",!0),n.onload=function(){n.status>=200&&n.status<400&&(o=n.responseText,r(),a&&(localStorage.setItem("",o),localStorage.setItem("",1)))},n.send()}catch(e){console.log(e)}}(window,document);
 </script>
 <script src="js/myscript.js"></script>
