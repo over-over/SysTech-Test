@@ -64,20 +64,20 @@ window.onload = function () {
   };
 
   var collapseToggle = function collapseToggle(e) {
-    var element = document.querySelector(e.target.dataset.target);
+    var element = document.querySelector(e.currentTarget.dataset.target);
 
-    if (e.target.classList.contains('--collapsed')) {
-      e.target.classList.remove('--collapsed');
+    if (e.currentTarget.classList.contains('--collapsed')) {
+      e.currentTarget.classList.remove('--collapsed');
       collapseUp(element);
     } else {
-      e.target.classList.add('--collapsed');
+      e.currentTarget.classList.add('--collapsed');
       collapseDown(element);
     }
   };
 
   items.forEach(function (node) {
     node.addEventListener('click', function (e) {
-      return collapseToggle(e);
+      collapseToggle(e);
     });
   });
 };

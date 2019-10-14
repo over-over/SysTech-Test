@@ -58,18 +58,20 @@ window.onload = function(){
     }
 
     const collapseToggle = (e) => {
-        const element = document.querySelector(e.target.dataset.target);
-        if(e.target.classList.contains('--collapsed')){
-            e.target.classList.remove('--collapsed');
+        const element = document.querySelector(e.currentTarget.dataset.target);
+        if(e.currentTarget.classList.contains('--collapsed')){
+            e.currentTarget.classList.remove('--collapsed');
             collapseUp(element);
         } else {
-            e.target.classList.add('--collapsed');
+            e.currentTarget.classList.add('--collapsed');
             collapseDown(element);
         }
     }
 
     items.forEach((node) => {
-        node.addEventListener('click', (e) => collapseToggle(e));
+        node.addEventListener('click', (e) => {
+            collapseToggle(e);
+        });
     })
 
 }
